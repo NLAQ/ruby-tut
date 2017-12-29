@@ -30,9 +30,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  layouts:
-    application:
-      base_name: "Ruby on Rails Tutorial Sample App"
+  base_name: "Ruby on Rails Tutorial Sample App"
+  intro: "Welcome to the Sample App"
   static_pages:
     home:
       title: "Home"
@@ -42,3 +41,9 @@ en:
       title: "Help"
       helpTut: "Get help on the Ruby on Rails Tutorial at the"
       helpApp: "To get help on this sample app, see the"
+    login: "Login"
+    signup: "Sign up"
+    about: "About"
+    contact: "Contact"
+    by: "by"
+    news: "News"

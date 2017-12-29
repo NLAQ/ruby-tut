@@ -1,6 +1,9 @@
-<% provide :title, t("static_pages.home.title") %>
-<h1><%= t "static_pages.home.title" %></h1>
-<p>
-  <%= t "static_pages.home.txt" %>
-  <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-</p>
+<div class="center jumbotron">
+  <h1><%= t "intro" %></h1>
+  <h2>
+    <%= t "static_pages.home.txt" %>
+    <a href="http://www.railstutorial.org/"><%= t "base_name" %></a>
+  </h2>
+  <%= link_to t("signup"), "#", class: "btn btn-lg btn-primary" %>
+</div>
+<%= link_to image_tag("rails.png", alt: "Rails logo"), "http://rubyonrails.org/" %>

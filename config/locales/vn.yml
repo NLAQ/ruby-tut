@@ -1,0 +1,13 @@
+vn:
+  layouts:
+    application:
+      base_name: "Huong dan Ruby on Rails co ban"
+  static_pages:
+    home:
+      title: "Trang chu"
+      txt: "Day la trang chu cua"
+      app_name: "Ung dung mau"
+    help:
+      title: "Ho tro"
+      helpTut: "Xem huong dan o ve Ruby on Rails o"
+      helpApp: "Xem ho tro ve ung dung mau o"

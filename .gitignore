@@ -22,6 +22,8 @@
 
 .byebug_history
 
-#Ignore the database.yml and secrets.yml
+# Ignore the database.yml and secrets.yml
 /config/database.yml
 /config/secrets.yml
+/.framgia-ci-reports/*
+/.framgia-ci-result.temp.yml

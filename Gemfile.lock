@@ -10,6 +10,16 @@ GIT
 GEM
   remote: https://rubygems.org/
   specs:
+    actioncable (5.1.4)
+      actionpack (= 5.1.4)
+      nio4r (~> 2.0)
+      websocket-driver (~> 0.6.1)
+    actionmailer (5.1.4)
+      actionpack (= 5.1.4)
+      actionview (= 5.1.4)
+      activejob (= 5.1.4)
+      mail (~> 2.5, >= 2.5.4)
+      rails-dom-testing (~> 2.0)
     actionpack (5.1.4)
       actionview (= 5.1.4)
       activesupport (= 5.1.4)
@@ -23,15 +33,26 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    activejob (5.1.4)
+      activesupport (= 5.1.4)
+      globalid (>= 0.3.6)
+    activemodel (5.1.4)
+      activesupport (= 5.1.4)
+    activerecord (5.1.4)
+      activemodel (= 5.1.4)
+      activesupport (= 5.1.4)
+      arel (~> 8.0)
     activesupport (5.1.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    ansi (1.5.0)
+    arel (8.0.0)
     ast (2.3.0)
     astrolabe (1.3.1)
       parser (~> 2.2)
-    autoprefixer-rails (7.2.3)
+    autoprefixer-rails (7.2.4)
       execjs
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
@@ -46,6 +67,7 @@ GEM
     bundler-audit (0.6.0)
       bundler (~> 1.2)
       thor (~> 0.18)
+    byebug (9.0.6)
     code_analyzer (0.4.8)
       sexp_processor
     codeclimate-engine-rb (0.4.1)
@@ -53,6 +75,13 @@ GEM
     coderay (1.1.2)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
+    coffee-rails (4.2.2)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0)
+    coffee-script (2.4.1)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.12.2)
     colorize (0.8.1)
     concurrent-ruby (1.0.5)
     crass (1.0.3)
@@ -72,6 +101,8 @@ GEM
       railties (>= 3.0.0)
     ffi (1.9.18)
     formatador (0.2.5)
+    globalid (0.4.1)
+      activesupport (>= 4.2.0)
     guard (2.14.1)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -82,6 +113,9 @@ GEM
       shellany (~> 0.0)
       thor (>= 0.18.1)
     guard-compat (1.2.1)
+    guard-minitest (2.4.6)
+      guard-compat (~> 1.2)
+      minitest (>= 3.0)
     guard-rspec (4.7.3)
       guard (~> 2.1)
       guard-compat (~> 1.1)
@@ -89,6 +123,13 @@ GEM
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
     ice_nine (0.11.2)
+    jbuilder (2.7.0)
+      activesupport (>= 4.2.0)
+      multi_json (>= 1.2)
+    jquery-rails (4.3.1)
+      rails-dom-testing (>= 1, < 3)
+      railties (>= 4.2.0)
+      thor (>= 0.14, < 2.0)
     jshint (1.5.0)
       execjs (>= 1.4.0)
       multi_json (~> 1.0)
@@ -103,11 +144,20 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     lumberjack (1.0.12)
+    mail (2.7.0)
+      mini_mime (>= 0.1.1)
     method_source (0.9.0)
+    mini_mime (1.0.0)
     mini_portile2 (2.3.0)
-    minitest (5.10.3)
+    minitest (5.11.1)
+    minitest-reporters (1.1.19)
+      ansi
+      builder
+      minitest (>= 5.0)
+      ruby-progressbar
     multi_json (1.12.2)
     nenv (0.3.0)
+    nio4r (2.2.0)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     notiffany (0.1.1)
@@ -119,10 +169,27 @@ GEM
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    puma (3.9.1)
     rack (2.0.3)
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
     railroady (1.5.3)
+    rails (5.1.4)
+      actioncable (= 5.1.4)
+      actionmailer (= 5.1.4)
+      actionpack (= 5.1.4)
+      actionview (= 5.1.4)
+      activejob (= 5.1.4)
+      activemodel (= 5.1.4)
+      activerecord (= 5.1.4)
+      activesupport (= 5.1.4)
+      bundler (>= 1.3.0)
+      railties (= 5.1.4)
+      sprockets-rails (>= 2.0.0)
+    rails-controller-testing (1.0.2)
+      actionpack (~> 5.x, >= 5.0.1)
+      actionview (~> 5.x, >= 5.0.1)
+      activesupport (~> 5.x)
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
@@ -153,14 +220,14 @@ GEM
       parser (>= 2.4.0.0, < 2.5)
       rainbow (~> 2.0)
     ref (2.0.0)
-    require_all (1.4.0)
+    require_all (1.5.0)
     rspec (3.7.0)
       rspec-core (~> 3.7.0)
       rspec-expectations (~> 3.7.0)
       rspec-mocks (~> 3.7.0)
     rspec-collection_matchers (1.1.3)
       rspec-expectations (>= 2.99.0.beta1)
-    rspec-core (3.7.0)
+    rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -188,6 +255,20 @@ GEM
       rubocop (>= 0.35.1)
     ruby-progressbar (1.9.0)
     ruby_dep (1.5.0)
+    sass (3.5.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    sass-rails (5.0.6)
+      railties (>= 4.0.0, < 6)
+      sass (~> 3.1)
+      sprockets (>= 2.8, < 4.0)
+      sprockets-rails (>= 2.0, < 4.0)
+      tilt (>= 1.1, < 3)
+    scss_lint (0.56.0)
+      rake (>= 0.9, < 13)
+      sass (~> 3.5.3)
     scss_lint_reporter_checkstyle (0.2.0)
     sexp_processor (4.10.0)
     shellany (0.0.1)
@@ -203,19 +284,36 @@ GEM
       simplecov
     simplecov-rcov (0.2.3)
       simplecov (>= 0.4.1)
+    sprockets (3.7.1)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
+    sprockets-rails (3.2.1)
+      actionpack (>= 4.0)
+      activesupport (>= 4.0)
+      sprockets (>= 3.0.0)
+    sqlite3 (1.3.13)
     therubyracer (0.12.3)
       libv8 (~> 3.16.14.15)
       ref
     thor (0.20.0)
     thread_safe (0.3.6)
+    tilt (2.0.8)
     tins (1.6.0)
+    turbolinks (5.0.1)
+      turbolinks-source (~> 5)
+    turbolinks-source (5.0.3)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
+    uglifier (3.2.0)
+      execjs (>= 0.3.0, < 3)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
+    websocket-driver (0.6.5)
+      websocket-extensions (>= 0.1.0)
+    websocket-extensions (0.1.3)
 
 PLATFORMS
   ruby
@@ -225,12 +323,22 @@ DEPENDENCIES
   better_errors
   brakeman
   bundler-audit
+  byebug (= 9.0.6)
+  coffee-rails (= 4.2.2)
   database_cleaner
   eslint-rails!
   factory_girl_rails
+  guard
+  guard-minitest
   guard-rspec
+  jbuilder (= 2.7.0)
+  jquery-rails (= 4.3.1)
   jshint
+  minitest-reporters
+  puma (= 3.9.1)
   railroady
+  rails (= 5.1.4)
+  rails-controller-testing
   rails_best_practices
   reek
   rspec
@@ -238,11 +346,16 @@ DEPENDENCIES
   rspec-rails
   rubocop (~> 0.35.0)
   rubocop-checkstyle_formatter
+  sass-rails (= 5.0.6)
+  scss_lint
   scss_lint_reporter_checkstyle
   shoulda-matchers
   simplecov
   simplecov-json
   simplecov-rcov
+  sqlite3 (= 1.3.13)
+  turbolinks (= 5.0.1)
+  uglifier (= 3.2.0)
 
 BUNDLED WITH
    1.16.1

@@ -1,7 +1,6 @@
 vn:
-  layouts:
-    application:
-      base_name: "Huong dan Ruby on Rails co ban"
+  base_name: "Huong dan Ruby on Rails co ban"
+  intro: "Chao mung ban den voi ung dung mau"
   static_pages:
     home:
       title: "Trang chu"
@@ -11,3 +10,9 @@ vn:
       title: "Ho tro"
       helpTut: "Xem huong dan o ve Ruby on Rails o"
       helpApp: "Xem ho tro ve ung dung mau o"
+  login: "Dang nhap"
+  signup: "Dang ki"
+  about: "Thong tin ve chung toi"
+  contact: "Lien he"
+  by: "boi"
+  news: "Tin tuc"

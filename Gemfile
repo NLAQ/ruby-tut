@@ -10,6 +10,8 @@ source "https://rubygems.org"
   gem "jbuilder", "2.7.0"
   gem "bootstrap-sass", "3.3.7"
   gem "bcrypt", "3.1.11"
+  gem 'carrierwave', '1.2.2'
+  gem 'mini_magick', '4.7.0'
 
 group :development, :test do
   gem "sqlite3", "1.3.13"

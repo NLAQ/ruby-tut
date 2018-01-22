@@ -106,6 +106,16 @@ en:
             password_confirmation:
               blank: "is required"
               confirmation: "is not same"
+        micropost:
+          attributes:
+            content:
+              blank: "can't be empty"
+            picture:
+              size_warning: "Maximum file size is 5MB. Please choose a smaller file"
+              size: "should be less than 5MB"
+    models:
+      user: "User"
+      micropost: "Micropost"
   page:
     models:
       users:
@@ -116,10 +126,29 @@ en:
           title: "Edit user"
           header: "Update your profile"
         delete:
-          title: "Delete"
+          title: "Delete user"
           confirm: "You sure?"
+      micropost:
+        create:
+          created: "Micropost created"
+        delete:
+          title: "Delete micropost"
+          confirm: "You sure?"
+          deleted: "Micropost deleted"
   user_mailer:
     account_activation:
       subject: "Account activation"
     password_reset:
       subject: "Password reset"
+  view_my_profile: "View my profile"
+  micropost:
+    show:
+      posted: "Posted"
+    create:
+      form:
+        placeholder: "Compose new micropost..."
+      post: "Post"
+    delete: "Delete"
+
+  ago: "ago"
+  micropost_feed: "Micropost Feed"

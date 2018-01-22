@@ -1,16 +1,18 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  attr_accessor :remember_token, :activation_token, :reset_token
-  validates :email, presence: true, length: {maximum: Settings.email.maximum},
+  attr_reader :remember_token, :activation_token, :reset_token
+
+  has_many :microposts, dependent: :destroy
+
+  validates :email, presence: true, length: {maximum: Settings.user.email.maximum},
     format: {with: VALID_EMAIL_REGEX}, uniqueness: {case_sensitive: false}
   validates :password, presence: true,
-    length: {minimum: Settings.password.minimum}
-  validates :name, presence: true, length: {maximum: Settings.name.maximum}
+    length: {minimum: Settings.user.password.minimum}
+  validates :name, presence: true, length: {maximum: Settings.user.name.maximum}
 
   has_secure_password
   before_save :downcase
   before_create :create_activation_digest
-
   class << self
     def digest string
       if ActiveModel::SecurePassword.min_cost
@@ -32,7 +34,7 @@ class User < ApplicationRecord
   end
 
   def forget
-    update_attribute(:remember_digest, nil)
+    update_attribute :remember_digest, nil
   end
 
   def authenticated? attribute, token
@@ -62,8 +64,12 @@ class User < ApplicationRecord
     reset_sent_at < 2.hours.ago
   end
 
+  def feed
+    microposts
+  end
+
   private
-  
+
   def downcase
     self.email = email.downcase
   end

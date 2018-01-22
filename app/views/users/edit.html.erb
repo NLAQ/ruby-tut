@@ -1,0 +1,17 @@
+<% if @user %>
+  <% provide :title, t("page.models.users.edit.title") %>
+  <% provide :button_text, t("save_changes") %>
+  <h1><%= t "page.models.users.edit.header" %></h1>
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= render "form" %>
+      <br>
+      <div class="gravatar_edit">
+        <%= gravatar_for @user %>
+        <a href="http://gravatar.com/emails" target="_blank"><%= t "change" %></a>
+      </div>
+    </div>
+  </div>
+<% else %>
+  <h1><%= t "activerecord.errors.models.user.not_found" %></h1>
+<% end %>

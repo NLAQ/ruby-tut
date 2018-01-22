@@ -36,6 +36,9 @@ group :development, :test do
   gem "autoprefixer-rails"
   gem "web-console"
   gem "config"
+  gem "faker"
+  gem "will_paginate", "3.1.6"
+  gem "bootstrap-will_paginate", "1.0.0"
 end
 
 group :test do

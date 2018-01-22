@@ -45,6 +45,10 @@ en:
   signup: "Sign up"
   about: "About"
   contact: "Contact"
+  profile: "Profile"
+  logout: "Logout"
+  account: "Account"
+  settings: "Settings"
   by: "by"
   news: "News"
   name: "Name"
@@ -52,6 +56,10 @@ en:
   confirmation: "Confirmation"
   error_noti: "The form contains"
   error: "error"
+  flash:
+    danger: "Invalid email/password combination"
+  models:
+    users: "Users"
   activerecord:
     errors:
       models:

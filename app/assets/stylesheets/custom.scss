@@ -12,6 +12,7 @@
 
 /* miscellaneous */
 
+// scss-lint:disable SelectorFormat
 .debug_dump {
   @include box-sizing;
   clear: both;
@@ -146,6 +147,7 @@ input {
   }
 }
 
+// scss-lint:disable PlaceholderInExtend
 .field-with-errors {
   @extend .has-error;
 

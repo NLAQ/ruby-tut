@@ -36,11 +36,19 @@ vn:
       danger: "Mật khẩu hoặc email không chính xác"
     login_require:
       danger: "Vui lòng đăng nhập trước"
+    login:
+      invalid_email_password: "Mật khẩu hoặc email không chính xác"
     user:
       edit:
         success: "Cập nhật thành công"
       delete:
         success: "Xóa thành công"
+    account_activation:
+      active_message: "Đường dẫn kích hoạt tài khoản đã được gửi đến email của bạn"
+      check_email: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản"
+      activated: "Kích hoạt thành công"
+      not_activated: "Tài khoản chưa kích hoạt"
+      invalid_link: "Đường dẫn không chính xác"
   models:
     users: "Người dùng"
   activerecord:
@@ -73,3 +81,6 @@ vn:
         delete:
           title: "Xóa"
           confirm: "Bạn có chắc chắn muốn xóa người dùng này không?"
+  user_mailer:
+    account_activation:
+      subject: "Account activation"

@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
   before_action :admin, only: :destroy
   def index
-    @users = User.paginate page: params[:page]
+    @users = User.where(activated: true).paginate(page: params[:page])
   end
 
   def new
@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if user.save
-      log_in user
-      flash[:success] = t "intro"
-      redirect_to user
+      user.send_activation_email
+      flash[:info] = t "flash.account_activation.info"
+      redirect_to root_url
     else
       render :new
     end
@@ -34,9 +34,9 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find params[:id]
-    if @user.update_attributes user_params
+    if user.update_attributes user_params
       flash[:success] = t "flash.user.edit.success"
-      redirect_to @user
+      redirect_to user
     else
       render :edit
     end
@@ -53,7 +53,7 @@ class UsersController < ApplicationController
   attr_reader :user
 
   def admin
-      redirect_to root_url unless current_user.admin?
+    redirect_to root_url unless current_user.admin?
   end
 
   def user_params
@@ -62,15 +62,14 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t "flash.login_require.danger"
-      redirect_to login_url
-    end
+    return if logged_in?
+    store_location
+    flash[:danger] = t "flash.login_require.danger"
+    redirect_to login_url
   end
 
   def correct_user
-    user = User.find(params[:id])
+    user = User.find params[:id]
     redirect_to root_url unless current_user? user
   end
 end

@@ -23,9 +23,12 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by id: params[:id]
-    return if user
-    flash[:danger] = t "activerecord.errors.models.user.not_found"
-    redirect_to root_path
+    if user
+      @microposts = user.microposts.paginate(page: params[:page])
+    else
+      flash[:danger] = t "activerecord.errors.models.user.not_found"
+      redirect_to root_path
+    end
   end
 
   def edit

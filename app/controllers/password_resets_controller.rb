@@ -2,11 +2,9 @@ class PasswordResetsController < ApplicationController
   before_action :get_user, only: [:edit, :update]
   before_action :valid_user, only: [:edit, :update]
   before_action :check_expiration, only: [:edit, :update]
-	def new
-    byebug
-  end
+  def new; end
 
-	def create
+  def create
     @user = User.find_by(email: params[:password_reset][:email].downcase)
     if user
       send_reset_email_and_redirect
@@ -38,20 +36,18 @@ class PasswordResetsController < ApplicationController
   end
 
   def get_user
-      @user = User.find_by email: params[:email]
+    @user = User.find_by email: params[:email]
   end
 
   def valid_user
-    unless (user && user.activated? && user.authenticated?(:reset, params[:id]))
-      redirect_to root_url
-    end
+    return if user && user.activated? && user.authenticated?(:reset, params[:id])
+    redirect_to root_url
   end
 
   def check_expiration
-    if user.password_reset_expired?
-      flash[:danger] = t "flash.forget_password.expired"
-      redirect_to new_password_reset_url
-    end
+    return unless user.password_reset_expired?
+    flash[:danger] = t "flash.forget_password.expired"
+    redirect_to new_password_reset_url
   end
 
   def send_reset_email_and_redirect default_url = root_url

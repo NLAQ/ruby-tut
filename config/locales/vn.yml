@@ -29,8 +29,18 @@ vn:
   confirmation: "Nhập lại mật khẩu"
   error_noti: "Thông tin đăng kí chứa"
   error: "lỗi"
+  save_changes: "Lưu thay đổi"
+  change: "Thay đổi"
   flash:
-    danger: "Mật khẩu hoặc email không chính xác"
+    email:
+      danger: "Mật khẩu hoặc email không chính xác"
+    login_require:
+      danger: "Vui lòng đăng nhập trước"
+    user:
+      edit:
+        success: "Cập nhật thành công"
+      delete:
+        success: "Xóa thành công"
   models:
     users: "Người dùng"
   activerecord:
@@ -51,3 +61,15 @@ vn:
             password_confirmation:
               blank: "không được để trống"
               confirmation: "nhập lại mật khẩu không đúng"
+  page:
+    models:
+      users:
+        index:
+          title: "Tất cả người dùng"
+          header: "Tất cả người dùng"
+        edit:
+          title: "Chỉnh sửa thông tin người dùng"
+          header: "Cập nhật thông tin cá nhân"
+        delete:
+          title: "Xóa"
+          confirm: "Bạn có chắc chắn muốn xóa người dùng này không?"

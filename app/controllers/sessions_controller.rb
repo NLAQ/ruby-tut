@@ -3,11 +3,11 @@ class SessionsController < ApplicationController
 
   def create
     session = params[:session]
-    user = User.find_by email: session[:email].downcase
+    user = User.find_by(email: session[:email].downcase)
     if user && user.authenticate(session[:password])
       log_in_and_redicrect user
     else
-      flash.now[:danger] = t "flash.danger"
+      flash.now[:danger] = t "flash.email.danger"
       render :new
     end
   end
@@ -19,14 +19,13 @@ class SessionsController < ApplicationController
 
   private
 
-  def log_in_and_redicrect user
-    log_in user
-    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
-    redirect_to user
-  end
-
   def log_out
     session.delete :user_id
     @current_user = nil
+
+  def log_in_and_redicrect user
+    log_in user
+    params[:session][:remember_me] == "1" ? remember(user) : forget(user)
+    redirect_back_or root_path
   end
 end

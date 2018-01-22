@@ -12,10 +12,7 @@ User.create!(name: "Anh Quan",
              admin: true,
              activated: true,
              activated_at: Time.zone.now)
-<<<<<<< 232e6246811a02c4837ccb4274cbc1594ccc69c6
 
-=======
->>>>>>> chap-13
 User.create!(name: "Quinncy",
              email: "quinncy@gmail.com",
              password: "anhquan96",
@@ -47,5 +44,12 @@ end
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
+  users.each {|user| user.microposts.create!(content: content)}
 end
+
+users = User.all
+user = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each {|followed| user.follow(followed)}
+followers.each {|follower| follower.follow(user)}

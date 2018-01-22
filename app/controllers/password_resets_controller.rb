@@ -5,7 +5,7 @@ class PasswordResetsController < ApplicationController
   def new; end
 
   def create
-    @user = User.find_by(email: params[:password_reset][:email].downcase)
+    @user = User.find_by email: params[:password_reset][:email].downcase
     if user
       send_reset_email_and_redirect
     else
@@ -60,6 +60,6 @@ class PasswordResetsController < ApplicationController
   def log_in_and_redirect user
     log_in user
     flash[:success] = t "flash.forget_password.reset"
-    redirect_to user 
+    redirect_to user
   end
 end

@@ -122,6 +122,47 @@ footer {
   }
 }
 
+.stats {
+  margin-top: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    border-left: 1px solid $gray-lighter;
+    color: $gray;
+    float: left;
+    padding: 0 10px;
+
+    &:first-child {
+      border: 0;
+      padding-left: 0;
+
+    }
+
+    &:hover {
+      color: $blue;
+      text-decoration: none;
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}
+
+.user_avatars {
+  margin-top: 10px;
+  overflow: auto;
+
+  .gravatar {
+    margin: 1px;
+  }
+
+  a {
+    padding: 0;
+  }
+}
+
 /* forms */
 
 input,
@@ -147,7 +188,7 @@ input {
   }
 }
 
-// scss-lint:disable PlaceholderInExtend
+//scss-lint:disable PlaceholderInExtend
 .field-with-errors {
   @extend .has-error;
 
@@ -166,7 +207,7 @@ input {
   }
 }
 
-// scss-lint:disable IdSelector
+//scss-lint:disable SelectorFormat, IdSelector
 #session_remember_me {
   margin-left: 0;
   width: auto;
@@ -179,9 +220,14 @@ input {
   margin: 0;
 
   li {
+    border-bottom: 1px solid $gray-lighter;
     overflow: auto;
     padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
+  }
+
+  &.follow {
+    padding: 0;
+  }
 }
 
 /* microposts */
@@ -191,8 +237,8 @@ input {
   padding: 0;
 
   li {
+    border-top: 1px solid $whisper;
     padding: 10px 0;
-    border-top: 1px solid #e8e8e8;
   }
 
   .user {
@@ -230,9 +276,9 @@ aside {
   }
 }
 
-span.picture {
+.picture {
   margin-top: 10px;
-  
+
   input {
     border: 0;
   }

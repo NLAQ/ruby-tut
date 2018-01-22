@@ -97,6 +97,7 @@ vn:
           title: "Xóa người dùng"
           confirm: "Bạn có chắc chắn muốn xóa người dùng này không?"
       micropost:
+        title: "Bài đăng"
         create:
           created: "Bài viết của bạn đã được lưu"
         delete:
@@ -109,6 +110,7 @@ vn:
     password_reset:
       subject: "Đặt lại mật khẩu"
   reset_password:
+
   # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
   datetime:
     distance_in_words:
@@ -173,7 +175,18 @@ vn:
         placeholder: "Viết gì đó..."
       post: "Đăng bài"
     delete: "Xóa bài"
+  user:
+    action:
+      follow: "Theo dõi"
+      unfollow: "Hủy theo dõi"
+
+  activerecord:
+    models:
+      user: "Người dùng"
+      micropost: "Bài đăng"
 
   ago: "trước"
+  following: "người đang theo dõi"
+  followers: "người theo dõi bạn"
 
-  delete: "Xóa"
+  micropost_feed: "Micropost Feed"

@@ -32,11 +32,11 @@ class SessionsController < ApplicationController
     redirect_back_or root_path
   end
 
-  def active_warning_and_redirect url_default = root_url
+  def active_warning_and_redirect default_url = root_url
     message  = t "flash.account_activation.active_message"
     message += t "flash.account_activation.check_email"
     flash[:warning] = message
-    redirect_to url_default
+    redirect_to default_url
   end
 
   def warning_invalid_and_redirect

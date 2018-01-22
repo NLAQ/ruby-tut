@@ -146,5 +146,18 @@ en:
         placeholder: "Compose new micropost..."
       post: "Post"
     delete: "Delete"
+  user:
+    action:
+      follow: "Follow"
+      unfollow: "Unfollow"
 
+  activerecord:
+    models:
+      user: "User"
+      micropost: "Micropost"
   ago: "ago"
+
+  following: "following"
+  followers: "followers"
+
+  micropost_feed: "Micropost Feed"

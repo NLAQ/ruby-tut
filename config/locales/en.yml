@@ -44,6 +44,9 @@ en:
   login:
     name: "Login"
     remember: "Remember me on this computer"
+    forget_password: "Forget password"
+    update_password: "Update password"
+  submit: "Submit"
   signup: "Sign up"
   about: "About"
   contact: "Contact"
@@ -76,6 +79,13 @@ en:
       activated: "Account activated"
       not_activated: "Account not activated"
       invalid_linkd: "Invalid activation link"
+    forget_password:
+      send_email: "Email sent with password reset instructions"
+      email_not_found: "Email address not found"
+      expired: "Password reset has expired"
+      reset: "Password has been reset"
+    reset_password:
+      empty: "can't be empty"
   models:
     users: "Users"
   activerecord:
@@ -111,3 +121,5 @@ en:
   user_mailer:
     account_activation:
       subject: "Account activation"
+    password_reset:
+      subject: "Password reset"

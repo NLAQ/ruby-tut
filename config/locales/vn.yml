@@ -13,6 +13,10 @@ vn:
   login: 
     name: "Đăng nhập"
     remember: "Lưu tài khoản"
+    forget_password: "Quên mật khẩu"
+    reset_password: "Đặt lại mật khẩu"
+    update_password: "Cập nhật mật khẩu"
+  submit: "Gửi"
   signup: "Đăng kí"
   about: "Thông tin về chúng tôi"
   contact: "Liên hệ"
@@ -49,6 +53,13 @@ vn:
       activated: "Kích hoạt thành công"
       not_activated: "Tài khoản chưa kích hoạt"
       invalid_link: "Đường dẫn không chính xác"
+    forget_password:
+      send_email: "Hướng dẫn đặt lại mật khẩu đã được gửi đến email của bạn"
+      email_not_found: "Không tìm thấy địa chỉ email"
+      expired: "Liên kết đã hết hạn"
+      reset: "Mật khẩu đã được đặt lại"
+    reset_password:
+      empty: "không được để trống"
   models:
     users: "Người dùng"
   activerecord:
@@ -83,4 +94,7 @@ vn:
           confirm: "Bạn có chắc chắn muốn xóa người dùng này không?"
   user_mailer:
     account_activation:
-      subject: "Account activation"
+      subject: "Kích hoạt tài khoản"
+    password_reset:
+      subject: "Đặt lại mật khẩu"
+  reset_password:

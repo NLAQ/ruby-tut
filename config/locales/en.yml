@@ -47,3 +47,26 @@ en:
   contact: "Contact"
   by: "by"
   news: "News"
+  name: "Name"
+  password: "Password"
+  confirmation: "Confirmation"
+  error_noti: "The form contains"
+  error: "error"
+  activerecord:
+    errors:
+      models:
+        user:
+          not_found: "User not found"
+          attributes:
+            name:
+              blank: "is required"
+            email:
+              blank: "is required"
+              taken: "is taken"
+              invalid: "is invalid"
+            password:
+              blank: "is required"
+              too_short: "too short"
+            password_confirmation:
+              blank: "is required"
+              confirmation: "is not same"

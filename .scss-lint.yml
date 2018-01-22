@@ -1,8 +1,11 @@
-scss_files: 'app/assets/stylesheets/**'
+scss_files: "app/assets/stylesheets/**"
 exclude:
-  - 'app/assets/stylesheets/application.css'
-  - 'vendor/assets/**'
-# Dont check comment use "/**/"
+  - "app/assets/stylesheets/application.css"
+  - "vendor/assets/**"
 linters:
   Comment:
-    exclude: '**/*.scss'
+    exclude: "**/*.scss"
+  VendorPrefix:
+    enabled: false
+  PlaceholderInExtend:
+    enable: false

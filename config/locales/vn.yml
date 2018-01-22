@@ -7,12 +7,35 @@ vn:
       txt: "Đây là trang chủ của"
       app_name: "ứng dụng mẫu"
     help:
-      title: "Hỗ trợ"
-      helpTut: "Xem hướng dẫn ở Ruby on Rails ở"
-      helpApp: "Xem hỗ trợ về ứng dụng mẫu ở"
-  login: "Đăng nhập"
-  signup: "Đăng kí"
-  about: "Thông tin về chúng tôi"
-  contact: "Liên hệ"
-  by: "bởi"
-  news: "Tin tức"
+      title: "Ho tro"
+      helpTut: "Xem huong dan o ve Ruby on Rails o"
+      helpApp: "Xem ho tro ve ung dung mau o"
+  login: "Dang nhap"
+  signup: "Dang ki"
+  about: "Thong tin ve chung toi"
+  contact: "Lien he"
+  by: "boi"
+  news: "Tin tuc"
+  name: "Ten nguoi dung"
+  password: "Mat khau"
+  confirmation: "Nhap lai mat khau"
+  error_noti: "Thong tin dang ki chua"
+  error: "loi"
+  activerecord:
+    errors:
+      models:
+        user:
+          not_found: "Khong tim thay nguoi dung"
+          attributes:
+            name:
+              blank: "khong duoc de trong"
+            email:
+              blank: "khong duoc de trong"
+              taken: "da ton tai"
+              invalid: "khong hop le"
+            password:
+              blank: "khong duoc de trong"
+              too_short: "qua ngan"
+            password_confirmation:
+              blank: "khong duoc de trong"
+              confirmation: "nhap lai mat khau khong dung"

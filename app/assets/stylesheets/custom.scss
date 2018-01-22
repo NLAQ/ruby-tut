@@ -1,17 +1,24 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-@import './colors.scss';
+@import './colors';
 
-/* universal */
-/*Properties order: 
-  color:
-  float:
-  font-size:
-  font-weight:
-  letter-spacing:
-  margin-right:
-  padding-top:
-  text-transform:*/
+/* mixins, variables, etc. */
+
+@mixin box-sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  @include box-sizing;
+  clear: both;
+  float: left;
+  margin-top: 45px;
+  width: 100%;
+}
 
 body {
   padding-top: 60px;
@@ -27,15 +34,20 @@ textarea {
 
 .center {
   text-align: center;
-}
 
-.center h1 {
-  margin-bottom: 10px;
+  h1 {
+    margin-bottom: 10px;
+  }
 }
 
 /* typography */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: 1;
 }
 
@@ -62,7 +74,7 @@ p {
 
 /* header */
 
-#logo {
+.logo {
   color: $grey;
   float: left;
   font-size: 1.7em;
@@ -73,7 +85,7 @@ p {
   text-transform: uppercase;
 }
 
-#logo:hover {
+.logo:hover {
   color: $white;
   text-decoration: none;
 }
@@ -85,26 +97,59 @@ footer {
   color: $grey;
   margin-top: 45px;
   padding-top: 5px;
+
+  a {
+    color: $matterhorn;
+
+    &:hover {
+      color: $nero;
+    }
+  }
+
+  small {
+    float: left;
+  }
+
+  ul {
+    float: right;
+    list-style: none;
+
+    li {
+      float: left;
+      margin-left: 15px;
+    }
+  }
 }
 
-footer a {
-  color: $matterhorn;
+/* forms */
+
+input,
+textarea,
+select,
+.uneditable-input {
+  @include box-sizing;
+  border: 1px solid $silver;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
-footer a:hover {
-  color: #222;
+input {
+  height: auto;
 }
 
-footer small {
-  float: left;
+.error-explanation {
+  color: $red;
+
+  ul {
+    color: $red;
+    margin: 0 0 30px;
+  }
 }
 
-footer ul {
-  float: right;
-  list-style: none;
-}
+.field-with-errors {
+  @extend .has-error;
 
-footer ul li {
-  float: left;
-  margin-left: 15px;
+  .form-control {
+    color: $state-danger-text;
+  }
 }

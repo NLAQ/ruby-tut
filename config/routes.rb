@@ -3,4 +3,6 @@ Rails.application.routes.draw do
   get "/help", to: "static_pages#help"
   get "/home", to: "static_pages#home"
   get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+  resources :users
 end

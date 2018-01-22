@@ -1,9 +1,9 @@
-require_relative 'boot'
+require_relative "boot"
 
-require 'rails/all'
+require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
+# you"ve limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module RubyTut
@@ -16,7 +16,15 @@ module RubyTut
   # -- all .rb files in that directory are automatically loaded.
 
   # Set load path and default locale for i18n
-  config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+  config.i18n.load_path += Dir[Rails.root.join("config", "locales", "*.{rb,yml}").to_s]
   config.i18n.default_locale = :vn
+
+  # Add config file
+  config.before_configuration do
+    env_file = File.join(Rails.root, "config", "application_enviroment.yml")
+      YAML.load(File.open(env_file)).each do |key, value|
+        ENV[key.to_s] = value
+      end if File.exists?(env_file)
+    end
   end
 end

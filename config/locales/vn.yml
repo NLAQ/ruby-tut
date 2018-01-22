@@ -10,7 +10,9 @@ vn:
       title: "Hỗ trợ"
       helpTut: "Xem hướng dẫn ở Ruby on Rails ở"
       helpApp: "Xem hỗ trợ về ứng dụng mẫu ở"
-  login: "Đăng nhập"
+  login: 
+    name: "Đăng nhập"
+    remember: "Lưu tài khoản"
   signup: "Đăng kí"
   about: "Thông tin về chúng tôi"
   contact: "Liên hệ"
@@ -35,7 +37,7 @@ vn:
     errors:
       models:
         user:
-          not_found: "Khong tim thay nguoi dung"
+          not_found: "Không tìm thấy người dùng"
           attributes:
             name:
               blank: "không được để trống"

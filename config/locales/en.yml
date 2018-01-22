@@ -41,7 +41,9 @@ en:
       title: "Help"
       helpTut: "Get help on the Ruby on Rails Tutorial at the"
       helpApp: "To get help on this sample app, see the"
-  login: "Login"
+  login:
+    name: "Login"
+    remember: "Remember me on this computer"
   signup: "Sign up"
   about: "About"
   contact: "Contact"

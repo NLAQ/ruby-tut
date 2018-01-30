@@ -34,6 +34,7 @@ group :development, :test do
   gem "reek"
   gem "railroady"
   gem "autoprefixer-rails"
+  gem "web-console"
   gem "config"
 end
 

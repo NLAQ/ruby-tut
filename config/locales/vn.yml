@@ -1,26 +1,36 @@
 vn:
   base_name: "Hướng dẫn Ruby on Rails cơ bản"
-  intro: "Chào mừng bạn đến với chương trình mẫu"
+  intro: "Chào mừng bạn đến với ứng dụng mẫu"
   static_pages:
     home:
       title: "Trang chủ"
       txt: "Đây là trang chủ của"
       app_name: "ứng dụng mẫu"
     help:
-      title: "Ho tro"
-      helpTut: "Xem huong dan o ve Ruby on Rails o"
-      helpApp: "Xem ho tro ve ung dung mau o"
-  login: "Dang nhap"
-  signup: "Dang ki"
-  about: "Thong tin ve chung toi"
-  contact: "Lien he"
-  by: "boi"
-  news: "Tin tuc"
-  name: "Ten nguoi dung"
-  password: "Mat khau"
-  confirmation: "Nhap lai mat khau"
-  error_noti: "Thong tin dang ki chua"
-  error: "loi"
+      title: "Hỗ trợ"
+      helpTut: "Xem hướng dẫn ở Ruby on Rails ở"
+      helpApp: "Xem hỗ trợ về ứng dụng mẫu ở"
+  login: "Đăng nhập"
+  signup: "Đăng kí"
+  about: "Thông tin về chúng tôi"
+  contact: "Liên hệ"
+  by: "bởi"
+  news: "Tin tức"
+  profile: "Thông tin người dùng"
+  logout: "Đăng xuất"
+  account: "Tài khoản"
+  settings: "Cài đặt"
+  by: "bởi"
+  news: "Tin tức"
+  name: "Tên người dùng"
+  password: "Mật khẩu"
+  confirmation: "Nhập lại mật khẩu"
+  error_noti: "Thông tin đăng kí chứa"
+  error: "lỗi"
+  flash:
+    danger: "Mật khẩu hoặc email không chính xác"
+  models:
+    users: "Người dùng"
   activerecord:
     errors:
       models:
@@ -28,14 +38,14 @@ vn:
           not_found: "Khong tim thay nguoi dung"
           attributes:
             name:
-              blank: "khong duoc de trong"
+              blank: "không được để trống"
             email:
-              blank: "khong duoc de trong"
-              taken: "da ton tai"
-              invalid: "khong hop le"
+              blank: "không được để trống"
+              taken: "đã tồn tại"
+              invalid: "không hợp lệ"
             password:
-              blank: "khong duoc de trong"
-              too_short: "qua ngan"
+              blank: "không được để trống"
+              too_short: "quá ngắn"
             password_confirmation:
-              blank: "khong duoc de trong"
-              confirmation: "nhap lai mat khau khong dung"
+              blank: "không được để trống"
+              confirmation: "nhập lại mật khẩu không đúng"

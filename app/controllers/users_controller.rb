@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     flash[:danger] = t "activerecord.errors.models.user.not_found"
     redirect_to root_path
   end
-  
+
   private
 
   attr_reader :user

@@ -41,7 +41,12 @@ en:
       title: "Help"
       helpTut: "Get help on the Ruby on Rails Tutorial at the"
       helpApp: "To get help on this sample app, see the"
-  login: "Login"
+  login:
+    name: "Login"
+    remember: "Remember me on this computer"
+    forget_password: "Forget password"
+    update_password: "Update password"
+  submit: "Submit"
   signup: "Sign up"
   about: "About"
   contact: "Contact"
@@ -56,8 +61,31 @@ en:
   confirmation: "Confirmation"
   error_noti: "The form contains"
   error: "error"
+  save_changes: "Save changes"
+  change: "change"
   flash:
-    danger: "Invalid email/password combination"
+    login_require:
+      danger: "Please login."
+    login:
+      invalid_email_password: "Invalid email/password combination"
+    user:
+      edit:
+        success: "Edit successfully"
+      delete:
+        success: "Delete successfully"
+    account_activation:
+      active_message: "Please check your email to activate your account"
+      check_email: "Check your email for the activation link"
+      activated: "Account activated"
+      not_activated: "Account not activated"
+      invalid_linkd: "Invalid activation link"
+    forget_password:
+      send_email: "Email sent with password reset instructions"
+      email_not_found: "Email address not found"
+      expired: "Password reset has expired"
+      reset: "Password has been reset"
+    reset_password:
+      empty: "can't be empty"
   models:
     users: "Users"
   activerecord:
@@ -78,3 +106,49 @@ en:
             password_confirmation:
               blank: "is required"
               confirmation: "is not same"
+        micropost:
+          attributes:
+            content:
+              blank: "can't be empty"
+            picture:
+              size_warning: "Maximum file size is 5MB. Please choose a smaller file"
+              size: "should be less than 5MB"
+    models:
+      user: "User"
+      micropost: "Micropost"
+  page:
+    models:
+      users:
+        index:
+          title: "All users"
+          header: "All users"
+        edit:
+          title: "Edit user"
+          header: "Update your profile"
+        delete:
+          title: "Delete user"
+          confirm: "You sure?"
+      micropost:
+        create:
+          created: "Micropost created"
+        delete:
+          title: "Delete micropost"
+          confirm: "You sure?"
+          deleted: "Micropost deleted"
+  user_mailer:
+    account_activation:
+      subject: "Account activation"
+    password_reset:
+      subject: "Password reset"
+  view_my_profile: "View my profile"
+  micropost:
+    show:
+      posted: "Posted"
+    create:
+      form:
+        placeholder: "Compose new micropost..."
+      post: "Post"
+    delete: "Delete"
+
+  ago: "ago"
+  micropost_feed: "Micropost Feed"

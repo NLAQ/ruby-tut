@@ -10,7 +10,13 @@ vn:
       title: "Hỗ trợ"
       helpTut: "Xem hướng dẫn ở Ruby on Rails ở"
       helpApp: "Xem hỗ trợ về ứng dụng mẫu ở"
-  login: "Đăng nhập"
+  login: 
+    name: "Đăng nhập"
+    remember: "Lưu tài khoản"
+    forget_password: "Quên mật khẩu"
+    reset_password: "Đặt lại mật khẩu"
+    update_password: "Cập nhật mật khẩu"
+  submit: "Gửi"
   signup: "Đăng kí"
   about: "Thông tin về chúng tôi"
   contact: "Liên hệ"
@@ -27,15 +33,37 @@ vn:
   confirmation: "Nhập lại mật khẩu"
   error_noti: "Thông tin đăng kí chứa"
   error: "lỗi"
+  save_changes: "Lưu thay đổi"
+  change: "Thay đổi"
   flash:
-    danger: "Mật khẩu hoặc email không chính xác"
+    login_require:
+      danger: "Vui lòng đăng nhập trước"
+      invalid_email_password: "Mật khẩu hoặc email không chính xác"
+    user:
+      edit:
+        success: "Cập nhật thành công"
+      delete:
+        success: "Xóa thành công"
+    account_activation:
+      active_message: "Đường dẫn kích hoạt tài khoản đã được gửi đến email của bạn"
+      check_email: "Vui lòng kiểm tra email của bạn để kích hoạt tài khoản"
+      activated: "Kích hoạt thành công"
+      not_activated: "Tài khoản chưa kích hoạt"
+      invalid_link: "Đường dẫn không chính xác"
+    forget_password:
+      send_email: "Hướng dẫn đặt lại mật khẩu đã được gửi đến email của bạn"
+      email_not_found: "Không tìm thấy địa chỉ email"
+      expired: "Liên kết đã hết hạn"
+      reset: "Mật khẩu đã được đặt lại"
+    reset_password:
+      empty: "không được để trống"
   models:
     users: "Người dùng"
   activerecord:
     errors:
       models:
         user:
-          not_found: "Khong tim thay nguoi dung"
+          not_found: "Không tìm thấy người dùng"
           attributes:
             name:
               blank: "không được để trống"
@@ -49,3 +77,107 @@ vn:
             password_confirmation:
               blank: "không được để trống"
               confirmation: "nhập lại mật khẩu không đúng"
+        micropost:
+          attributes:
+            content:
+              blank: "Nội dung không được để trống mà"
+            picture:
+              size_warning: "Kích thước hình ảnh không được quá 5MB. Vui lòng chọn hình ảnh nhỏ hơn"
+              size: "nhỏ hơn 5MB"
+    models:
+      user: "Người dùng"
+      micropost: "Bài đăng"
+  page:
+    models:
+      users:
+        index:
+          title: "Tất cả người dùng"
+          header: "Tất cả người dùng"
+        edit:
+          title: "Chỉnh sửa thông tin người dùng"
+          header: "Cập nhật thông tin cá nhân"
+        delete:
+          title: "Xóa người dùng"
+          confirm: "Bạn có chắc chắn muốn xóa người dùng này không?"
+      micropost:
+        create:
+          created: "Bài viết của bạn đã được lưu"
+        delete:
+          title: "Xóa bài viết"
+          confirm: "Bạn có muốn xóa bài viết này không?"
+          deleted: "Bài viết đã được xóa"
+  user_mailer:
+    account_activation:
+      subject: "Kích hoạt tài khoản"
+    password_reset:
+      subject: "Đặt lại mật khẩu"
+  reset_password:
+  # Used in distance_of_time_in_words(), distance_of_time_in_words_to_now(), time_ago_in_words()
+  datetime:
+    distance_in_words:
+      half_a_minute: "nửa phút"
+      less_than_x_seconds:
+        one:   "khoảng 1 giây"
+        other: "khoảng %{count} giây"
+      x_seconds:
+        one:   "1 giây"
+        other: "%{count} giây"
+      less_than_x_minutes:
+        one:   "khoảng một phút"
+        other: "khoảng %{count} phút"
+      x_minutes:
+        one:   "1 phút"
+        other: "%{count} phút"
+      about_x_hours:
+        one:   "khoảng 1 giờ"
+        other: "khoảng %{count} giờ"
+      x_days:
+        one:   "1 ngày"
+        other: "%{count} ngày"
+      about_x_months:
+        one:   "khoảng 1 tháng"
+        other: "khoảng %{ount} tháng"
+      x_months:
+        one:   "1 tháng"
+        other: "%{count} tháng"
+      about_x_years:
+        one:   "khoảng 1 năm"
+        other: "khoảng %{count} năm"
+      over_x_years:
+        one:   "hơn 1 năm"
+        other: "hơn %{count} năm"
+      almost_x_years:
+        one:   "gần 1 năm"
+        other: "gần %{count} năm"
+    prompts:
+      year:   "Năm"
+      month:  "tháng"
+      day:    "Ngày"
+      hour:   "Giờ"
+      minute: "Phút"
+      second: "Giây"
+
+  helpers:
+    select:
+      # Default value for :prompt => true in FormOptionsHelper
+      prompt: "Vui lòng chọn"
+
+    # Default translation keys for submit and button FormHelper
+    submit:
+      create: "Tạo %{model}"
+      update: "Cập nhật %{model}"
+      submit: "Lưu %{model}"
+  view_my_profile: "Xem trang cá nhân của tôi"
+  micropost:
+    show:
+      posted: "Đã đăng"
+    create:
+      form:
+        placeholder: "Viết gì đó..."
+      post: "Đăng bài"
+    delete: "Xóa bài"
+
+  ago: "trước"
+
+  delete: "Xóa"
+  micropost_feed: "Micropost Feed"

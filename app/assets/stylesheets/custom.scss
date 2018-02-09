@@ -155,3 +155,86 @@ input {
     color: $state-danger-text;
   }
 }
+
+.checkbox {
+  margin-bottom: 10px;
+  margin-top: -10px;
+
+  span {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+}
+
+// scss-lint:disable IdSelector
+#session_remember_me {
+  margin-left: 0;
+  width: auto;
+}
+
+/* Users index */
+
+.users {
+  list-style: none;
+  margin: 0;
+
+  li {
+    border-bottom: 1px solid $gray-lighter;
+    overflow: auto;
+    padding: 10px 0;
+  }
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  padding: 0;
+
+  li {
+    border-top: 1px solid $whisper;
+    padding: 10px 0;
+  }
+
+  .user {
+    margin-top: 5em;
+    padding-top: 0;
+  }
+
+  .content {
+    display: block;
+    margin-left: 60px;
+
+    img {
+      display: block;
+      padding: 5px 0;
+    }
+  }
+
+  .timestamp {
+    color: $gray-light;
+    display: block;
+    margin-left: 60px;
+  }
+
+  .gravatar {
+    float: left;
+    margin-right: 10px;
+    margin-top: 5px;
+  }
+}
+
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+.picture {
+  margin-top: 10px;
+
+  input {
+    border: 0;
+  }
+}

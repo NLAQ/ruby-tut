@@ -11,7 +11,7 @@ source "https://rubygems.org"
   gem "bootstrap-sass", "3.3.7"
   gem "bcrypt", "3.1.11"
 
-group :development, :test do
+group :development do
   gem "sqlite3", "1.3.13"
   gem "byebug", "9.0.6", platform: :mri
   # Call "byebug" anywhere in the code to stop execution and get a debugger console

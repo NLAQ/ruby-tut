@@ -61,21 +61,12 @@ en:
   save_changes: "Save changes"
   change: "change"
   flash:
+    email:
+      danger: "Invalid email/password combination"
+    edit_user:
+      success: "Profile updated"
     login_require:
       danger: "Please login."
-    login:
-      invalid_email_password: "Invalid email/password combination"
-    user:
-      edit:
-        success: "Edit successfully"
-      delete:
-        success: "Delete successfully"
-    account_activation:
-      active_message: "Please check your email to activate your account. 
-        Check your email for the activation link"
-      activated: "Account activated"
-      not_activated: "Account not activated"
-      invalid_linkd: "Invalid activation link"
   models:
     users: "Users"
   activerecord:
@@ -108,8 +99,3 @@ en:
         delete:
           title: "Delete"
           confirm: "You sure?"
-  user_mailer:
-    introduction: "Welcome to Sample App. Click the link below to activate your account:"
-    activate: "Activate"
-    account_activation:
-      subject: "Account activation"
